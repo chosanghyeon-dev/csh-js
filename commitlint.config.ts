@@ -19,7 +19,7 @@ const Configuration: UserConfig = {
   rules: {
     "scope-enum": [2, "always", [...getPackages()]],
   },
-  ignores: [(commit) => commit === "Version Packages"],
+  ignores: [(message) => message.trim() === "Version Packages"],
 };
 
 export default Configuration;
