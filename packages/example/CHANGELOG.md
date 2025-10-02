@@ -1,4 +1,4 @@
-# @jsh/example
+# @csh-js/example
 
 ## 0.0.3
 
