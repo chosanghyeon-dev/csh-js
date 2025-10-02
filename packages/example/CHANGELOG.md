@@ -1,5 +1,11 @@
 # @csh-js/example
 
+## 0.0.4
+
+### Patch Changes
+
+- 537f69a: pre release @csh-js/example
+
 ## 0.0.3
 
 ### Patch Changes
