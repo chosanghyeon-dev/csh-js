@@ -1,5 +1,11 @@
 # @csh-js/example
 
+## 0.0.5
+
+### Patch Changes
+
+- 4354de7: 필요한 파일만 업로드하는 방식으로 변경
+
 ## 0.0.4
 
 ### Patch Changes
