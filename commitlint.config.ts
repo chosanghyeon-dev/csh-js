@@ -26,6 +26,9 @@ const Configuration: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   rules: {
     "scope-enum": [2, "always", [...getPackages()]],
+    "footer-empty": [2, "always"],
+    "references-empty": [2, "always"],
+    "body-empty": [2, "always"],
   },
   ignores: [(message) => message.trim() === "Version Packages"],
 };
