@@ -1,16 +1,24 @@
 import type { UserConfig } from "@commitlint/types";
-import { readdirSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 
 const getPackages = (): string[] => {
-  try {
-    const packagesDir = join(__dirname, "packages");
-    return readdirSync(packagesDir, { withFileTypes: true })
-      .filter((dirent) => dirent.isDirectory())
-      .map((dirent) => dirent.name);
-  } catch {
-    return [];
-  }
+  const packagesDir = join(__dirname, "packages");
+
+  const packages = readdirSync(packagesDir, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => {
+      try {
+        const pkgPath = join(packagesDir, dirent.name, "package.json");
+        const pkgJson = JSON.parse(readFileSync(pkgPath, "utf-8"));
+
+        return pkgJson.name;
+      } catch {
+        return dirent.name;
+      }
+    });
+
+  return packages;
 };
 
 // https://www.conventionalcommits.org/en/v1.0.0/
