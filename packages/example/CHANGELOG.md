@@ -1,5 +1,11 @@
 # @jsh/example
 
+## 0.0.3
+
+### Patch Changes
+
+- 92aebee: csh-js example post release
+
 ## 0.0.2
 
 ### Patch Changes
