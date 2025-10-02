@@ -3,7 +3,7 @@
   "scripts": {
     "prepare": "husky",
     "commit": "git-cz",
-    "bump": "changeset version",
+    "release": "changeset version",
     "build": "pnpm -r --filter='./packages/*' run build"
   },
   "packageManager": "pnpm@10.6.3",
