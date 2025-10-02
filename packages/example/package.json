@@ -10,5 +10,11 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "CHANGELOG.md",
+    "README.md"
+  ]
 }
