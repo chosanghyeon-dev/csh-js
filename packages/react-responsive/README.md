@@ -39,7 +39,7 @@ export const { Responsive, MediaContextProvider, rootMediaStyle } =
 function App() {
   return (
     <>
-      {/* 스타일 주입 (필수) */}
+      {/* 스타일 주입 (필수) Server Side를 지원하고 있다면 Server Side를 지원하는 공통 파일에 넣어주세요. (ex. next.js _document.tsx) */}
       <style>{rootMediaStyle}</style>
 
       <MediaContextProvider>
